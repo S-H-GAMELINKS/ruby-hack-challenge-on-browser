@@ -1,0 +1,4 @@
+dev.example.com {
+    encode gzip
+    reverse_proxy code:8080
+}
