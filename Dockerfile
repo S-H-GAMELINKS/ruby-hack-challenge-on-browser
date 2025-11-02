@@ -12,8 +12,6 @@ RUN mkdir -p /workspace /data
 
 COPY start.sh /usr/local/bin/start.sh
 RUN chmod +x /usr/local/bin/start.sh
-
-USER coder
-WORKDIR /workspace
-
 ENTRYPOINT ["/usr/local/bin/start.sh"]
+
+WORKDIR /workspace
