@@ -13,7 +13,7 @@ services:
         sync: false
 
     disk:
-      - name: persistent
-        mountPath: /data
-        sizeGB: 10
+      name: persistent
+      mountPath: /data
+      sizeGB: 10
 
