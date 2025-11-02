@@ -5,11 +5,9 @@ services:
       PASSWORD: "${PASSWORD}"
     volumes:
       - ./workspace:/workspace
-      - code_data:/data
     expose:
       - "8080"
-    command: bin/bash -c "mkdir /workspace /data && exec code-server --user-data-dir /data --bind-addr 0.0.0.0:8080"
-    working_dir: /workspace
+    command: bin/bash -c "mkdir /workspace && exec code-server --user-data-dir /workspace --bind-addr 0.0.0.0:8080"
     restart: unless-stopped
 
   caddy:
