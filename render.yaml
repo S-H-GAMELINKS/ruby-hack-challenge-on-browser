@@ -12,7 +12,7 @@ services:
       - key: PASSWORD
         sync: false
 
-    disks:
+    disk:
       - name: code_data
         mountPath: /data
         sizeGB: 5
