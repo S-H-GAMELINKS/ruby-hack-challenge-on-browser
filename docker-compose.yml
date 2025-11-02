@@ -7,7 +7,7 @@ services:
       - ./workspace:/workspace
     expose:
       - "8080"
-    command: bin/bash -c "mkdir /workspace && exec code-server --user-data-dir /workspace --bind-addr 0.0.0.0:8080"
+    command: "mkdir /workspace && exec code-server --user-data-dir /workspace --bind-addr 0.0.0.0:8080"
     restart: unless-stopped
 
   caddy:
