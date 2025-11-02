@@ -1,6 +1,6 @@
 services:
   code:
-    image: ghcr.io/coder/code-server:latest
+    build: .
     environment:
       PASSWORD: "${PASSWORD}"
     volumes:
