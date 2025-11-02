@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: code-server-ruby-hack-challenge
+    env: docker
+    plan: free
+    autoDeploy: false
+    dockerfilePath: ./Dockerfile
+
+    healthCheckPath: /
+
+    envVars:
+      - key: PASSWORD
+        sync: false
+
+    disks:
+      - name: code_data
+        mountPath: /data
+        sizeGB: 5
+      - name: workspace
+        mountPath: /workspace
+        sizeGB: 5

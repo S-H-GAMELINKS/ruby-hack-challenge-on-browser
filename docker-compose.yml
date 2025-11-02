@@ -1,0 +1,12 @@
+services:
+  code:
+    build: .
+    environment:
+      PASSWORD: "password"
+    volumes:
+      - ./workspace:/workspace
+      - ./data:/data
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
