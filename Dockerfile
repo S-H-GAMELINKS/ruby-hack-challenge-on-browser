@@ -11,7 +11,7 @@ RUN apt update && apt install -y \
 RUN mkdir -p /data /workspace && chown -R coder:coder /data /workspace
 
 USER coder
-WORKDIR /home/coder/workspace
+WORKDIR /workspace
 
 COPY --chown=coder:coder start.sh /home/coder/start.sh
 ENTRYPOINT ["/bin/bash", "/home/coder/start.sh"]
