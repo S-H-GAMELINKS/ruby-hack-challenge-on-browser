@@ -9,10 +9,7 @@ services:
     expose:
       - "8080"
     command: >
-      sh -lc "
-        mkdir -p /workspace /data &&
-        exec code-server --user-data-dir /data --bind-addr 0.0.0.0:8080
-      "
+      /bin/sh -c "mkdir -p /workspace /data && exec code-server --user-data-dir /data --bind-addr 0.0.0.0:8080"
     restart: unless-stopped
 
   caddy:
