@@ -13,9 +13,7 @@ services:
         sync: false
 
     disk:
-      - name: code_data
+      - name: persistent
         mountPath: /data
-        sizeGB: 5
-      - name: workspace
-        mountPath: /workspace
-        sizeGB: 5
+        sizeGB: 10
+
