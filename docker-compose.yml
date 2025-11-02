@@ -4,7 +4,7 @@ services:
     environment:
       PASSWORD: "${PASSWORD}"
     volumes:
-      - ./workspace:/workspace
+      - workspace_data:/workspace
       - ./data:/data
     expose:
       - "8080"
@@ -24,6 +24,7 @@ services:
     restart: unless-stopped
 
 volumes:
+  workspace_data:
   code_data:
   caddy_data:
   caddy_config:
